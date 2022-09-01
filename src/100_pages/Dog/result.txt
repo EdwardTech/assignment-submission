@@ -1,0 +1,10 @@
+Запуск java Dog
+
+
+Вывод
+nullSay bark
+Name's last dog - Bart
+RexSay bark
+StivSay bark
+BartSay bark
+alexia@alexia:~/

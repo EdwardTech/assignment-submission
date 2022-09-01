@@ -1,0 +1,6 @@
+java DogTestDrive
+
+Вывод
+Гав
+Вуф
+Тяф

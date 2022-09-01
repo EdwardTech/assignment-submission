@@ -1,0 +1,4 @@
+запускаем java BoolsTestDrive
+
+вывод
+fruit's Java, authorBobJava Gatsby, authorStivcollection recipes for Java, authorYann
