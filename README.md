@@ -1,2 +1,1 @@
-# to-check-Oleg
-Easy Java task
+# initial project

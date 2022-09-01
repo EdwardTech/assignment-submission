@@ -1,3 +1,0 @@
-запуск java ClockTestDrive
-
-вывод Время 1245
