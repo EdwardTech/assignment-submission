@@ -5,10 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -17,6 +14,7 @@ import javax.persistence.ManyToOne;
 public class Authority implements GrantedAuthority {
 
     private static final long serialVersionUID = -1771962065322683758L;
+
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
