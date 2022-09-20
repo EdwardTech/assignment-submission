@@ -1,9 +1,8 @@
 package com.codercampus.AssignmentSubmission.domain;
 
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,7 +16,6 @@ import java.util.List;
 @Table(name = "users")
 @Getter
 @Setter
-
 public class User implements UserDetails {
 
     private static final long serialVersionUID = 800428823444155002L;
@@ -28,12 +26,15 @@ public class User implements UserDetails {
 
     private LocalDate cohortStartDate;
     private String username;
+    @JsonIgnore
     private String password;
-    //private List<Assignment> assignmentList;
+    @JsonIgnore
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
+    private List<Authority> authorities;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new Authority("ROLE_STUDENT"));
+        return authorities;
     }
 
     @Override
