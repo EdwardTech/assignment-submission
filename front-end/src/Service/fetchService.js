@@ -16,10 +16,7 @@ function request(url, requestMethod, jwt, requestBody) {
     }
 
     return fetch(url, fetchData).then((response) => {
-            if (response.status === 200) {
-                console.log(`Response on request function inside IF: ${response}`);
-                return response.json();
-            }
+            if (response.status === 200) return response.json();
         });
 }
 

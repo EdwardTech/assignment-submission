@@ -8,11 +8,9 @@ const DashBoard = () => {
     const [assignments, setAssignments] = useState(null);
 
     useEffect(() => {
-        console.log(`Assignments before request: ${assignments}`);
         request("/api/assignments", "GET", jwt).then((assignmentsData) => {
                 setAssignments(assignmentsData);
             });
-        console.log(`Assignments after request: ${assignments}`);
     }, []);
 
 
